@@ -23,4 +23,5 @@ fi
 pushd $HOME
   grab-latest briskconfig/nvim  # TODO: Test overwriting .local (should only overwrite existing files)
   echo '[[ $PATH =~ $HOME/.local/bin ]] || export PATH=$HOME/.local/bin:$PATH' >> $HOME/.bashrc
+  echo '[[ $XDG_CONFIG_HOME ]] || export XDG_CONFIG_HOME=$HOME/.local/etc/xdg' >> $HOME/.bashrc
 popd
