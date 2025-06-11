@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/elijahdaniel/.local/etc/xdg/nvim/legacy'
+let g:netrw_dirhist_0='/home/elijahdaniel/.local/etc/xdg/nvim'
+let g:netrw_dirhist_9='/home/elijahdaniel/.local/etc/xdg/nvim/legacy'
+let g:netrw_dirhist_8='/home/elijahdaniel/.local/etc/xdg/nvim/plugconf'
+let g:netrw_dirhist_7='/home/elijahdaniel/.local/etc/xdg/nvim'
+let g:netrw_dirhist_6='/home/elijahdaniel/.local/etc/xdg/nvim/plugconf'
+let g:netrw_dirhist_5='/home/elijahdaniel/.local/etc/xdg/nvim/legacy'
+let g:netrw_dirhist_4='/home/elijahdaniel/.local/etc/xdg/nvim'
+let g:netrw_dirhist_3='/home/elijahdaniel/.local/etc/xdg/ruby'
+let g:netrw_dirhist_2='/home/elijahdaniel/.local/etc/xdg/ruby/lib'

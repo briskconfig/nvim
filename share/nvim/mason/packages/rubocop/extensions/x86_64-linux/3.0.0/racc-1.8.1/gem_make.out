@@ -1,0 +1,15 @@
+current directory: /home/elijahdaniel/.local/share/nvim/mason/staging/rubocop/gems/racc-1.8.1/ext/racc/cparse
+/home/elijahdaniel/.local/etc/xdg/asdf/installs/ruby/3.0.0/bin/ruby -I /home/elijahdaniel/.local/etc/xdg/asdf/installs/ruby/3.0.0/lib/ruby/3.0.0 -r ./siteconf20250501-4089045-o1qnaj.rb extconf.rb
+creating Makefile
+
+current directory: /home/elijahdaniel/.local/share/nvim/mason/staging/rubocop/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /home/elijahdaniel/.local/share/nvim/mason/staging/rubocop/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/elijahdaniel/.local/share/nvim/mason/staging/rubocop/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20250501-4089045-n8d1uo/racc

@@ -1,0 +1,1 @@
+{"name":"fixjson","primary_source":{"type":"registry+v1","id":"pkg:npm\/fixjson@1.1.2"},"links":{"bin":{"fixjson":"node_modules\/.bin\/fixjson"},"opt":{},"share":{}},"secondary_sources":[],"metrics":{"start_time":1745509766419,"completion_time":1745509769058},"schema_version":"1.1"}
