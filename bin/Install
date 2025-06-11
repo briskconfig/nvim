@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+set -e
+
+ERR="[38;5;9m"
+CLR="[0m"
+grab_latest='https://github.com/BriskBear/profile.d/raw/refs/heads/release/grab_latest.sh'
+
+# Exit unless git
+[[ `git 2>/dev/null` ]] || ( echo -e "${ERR}Error: git not installed${CLR}" ; exit 1 )
+
+# Prefer curl else find wget
+if [[ `curl 2>/dev/null` == 127 ]]
+then [[ `wget 2>/dev/null` == 127 ]]                                                   \
+  && ( echo -e "${ERR}Error: Install 'curl' or 'wget' and try again.${CLR}" ; exit 2 ) \
+  || web='wget -S'
+else web='curl -#L'
+fi
+
+`${web} ${grab_latest} > /tmp/grab_latest.sh`
+. /tmp/grab_latest.sh
+
+pushd $HOME
+  grab-latest briskconfig/nvim  # TODO: Test overwriting .local (should only overwrite existing files)
+  echo '[[ $PATH =~ $HOME/.local/bin ]] || export PATH=$HOME/.local/bin:$PATH' >> $HOME/.bashrc
+popd
+
+echo -e "[38;5;225mREMINDER: Don't forget to source .bashrc! eg. . $HOME/.bashrc"
