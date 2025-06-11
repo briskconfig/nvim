@@ -24,5 +24,3 @@ pushd $HOME
   grab-latest briskconfig/nvim  # TODO: Test overwriting .local (should only overwrite existing files)
   echo '[[ $PATH =~ $HOME/.local/bin ]] || export PATH=$HOME/.local/bin:$PATH' >> $HOME/.bashrc
 popd
-
-echo -e "[38;5;225mREMINDER: Don't forget to source .bashrc! eg. . $HOME/.bashrc"
