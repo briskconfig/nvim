@@ -10,7 +10,7 @@
   hi   Conceal      guifg=#BBE0E6
   hi   Constant     guifg=#9cb39d
   hi   Cursor       guifg=NONE    guibg=#026228 gui=BOLD
-  hi   CursorLine   guibg=NONE    guifg=NONE    gui=underline
+  hi   CursorLine   guibg=#062909 guifg=NONE    gui=NONE
   hi   CursorLineNr guibg=#062909 guifg=#26c06d gui=NONE
   hi   EndOfBuffer  guibg=NONE    guifg=#026228 gui=NONE
   hi   ErrorMsg     guibg=darkred guifg=#BBE0E6 gui=NONE

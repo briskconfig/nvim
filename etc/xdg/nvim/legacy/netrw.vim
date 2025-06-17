@@ -1,5 +1,3 @@
-" QOL things:
-""" Appearance
 let g:netrw_banner       = 0
 let g:netrw_liststyle    = 3
 let g:netrw_browse_split = 2
@@ -7,7 +5,6 @@ let g:netrw_winsize      = 84
 let g:netrw_altv         = 1
 let g:netrw_sort_by      = "exten"
 
-""" Use '-' to open the folder containing the current buffer
 nnoremap <silent> <Plug>VinegarUp :call <SID>opendir('edit')<CR>
 if empty(maparg('-', 'n')) && !hasmapto('<Plug>VinegarUp')
   nmap - <Plug>VinegarUp
@@ -41,3 +38,4 @@ function! s:seek(file) abort
   call search(pattern, 'wc')
   return pattern
 endfunction
+

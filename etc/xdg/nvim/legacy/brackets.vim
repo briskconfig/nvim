@@ -42,9 +42,9 @@ imap %% %<Space><ESC>mqa<Space>%<ESC>`qa
 imap %= %=<Space><ESC>mqa<Space>%<ESC>`qa
 
 "" Surround text with a bracket-char
-vmap s" <ESC>`>a"<ESC>`<i"
-vmap s' <ESC>`>a'<ESC>`<i'
-vmap s` <ESC>`>a`<ESC>`<i`
+vmap s" <ESC>`>a""<ESC>`<i""
+vmap s' <ESC>`>a''<ESC>`<i''
+vmap s` <ESC>`>a``<ESC>`<i``
 vmap s( <ESC>`>a)<ESC>`<i(
 vmap s{ <ESC>`>a}<ESC>`<i{
 vmap s[ <ESC>`>a]<ESC>`<i[

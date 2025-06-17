@@ -7,7 +7,7 @@ call plug#begin()
   Plug 'junegunn/vim-easy-align'
 
   " Formatter
-  " Plug 'mhartington/formatter.nvim'
+  Plug 'mhartington/formatter.nvim'
 
   " GitSigns
   Plug 'lewis6991/gitsigns.nvim'
