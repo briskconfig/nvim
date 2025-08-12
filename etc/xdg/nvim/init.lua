@@ -28,37 +28,33 @@ Xdg = os.getenv("XDG_CONFIG_HOME") or os.getenv("HOME") .. ".config"
 Cfgdir = Xdg .. "/nvim/"
 
 -- [[ Setting options ]]
-vim.g.mapleader = " " --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.g.mapleader      = " "      -- NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
-vim.o.number = true -- Make line numbers default
-vim.o.mouse = "a" -- Enable mouse mode, can be useful for resizing splits for example!
-vim.o.showmode = false -- Don't show the mode, since it's already in the status line
-vim.o.colorcolumn = "79,99"
-vim.o.expandtab = true
-vim.o.foldmethod = "indent"
-vim.o.shiftwidth = 2
-vim.o.softtabstop = 2
-vim.o.tabstop = 2
-vim.o.breakindent = true -- Enable break indent
-vim.o.undofile = true -- Save undo history
-vim.o.undodir = os.getenv("HOME") .. "/.local/state/nvim/undo"
-vim.o.directory = os.getenv("HOME") .. "/.local/state/nvim/swap"
+vim.o.number         = true     -- Make line numbers default
+vim.o.mouse          = "a"      -- Enable mouse mode, can be useful for resizing splits for example!
+vim.o.showmode       = false    -- Don't show the mode, since it's already in the status line
+vim.o.colorcolumn    = "79,99"
+vim.o.expandtab      = true
+vim.o.foldmethod     = "indent"
+vim.o.shiftwidth     = 2
+vim.o.softtabstop    = 2
+vim.o.tabstop        = 2
+vim.o.breakindent    = true     -- Enable break indent
+vim.o.undofile       = true     -- Save undo history
+vim.o.undodir        = os.getenv("HOME") .. "/.local/state/nvim/undo"
+vim.o.directory      = os.getenv("HOME") .. "/.local/state/nvim/swap"
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.o.ignorecase = true
-vim.o.smartcase = true
-vim.o.signcolumn = "yes" -- Keep signcolumn on by default
-vim.o.inccommand = "split" -- Preview substitutions live, as you type!
-vim.o.cursorline = true -- Show which line your cursor is on
-vim.o.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.confirm = true
-
-vim.o.updatetime = 250 -- Decrease update time
-vim.o.timeoutlen = 300 -- Decrease mapped sequence wait time
-
-vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
-end) -- Sync clipboard between OS and Neovim.
+vim.o.ignorecase     = true
+vim.o.smartcase      = true
+vim.o.signcolumn     = "yes"    -- Keep signcolumn on by default
+vim.o.inccommand     = "split"  -- Preview substitutions live, as you type!
+vim.o.cursorline     = true     -- Show which line your cursor is on
+vim.o.scrolloff      = 10       -- Minimal number of screen lines to keep above and below the cursor.
+vim.o.confirm        = true
+vim.o.wrap           = false    -- Do not wrap over-length lines
+vim.o.updatetime     = 250      -- Decrease update time
+vim.o.timeoutlen     = 300      -- Decrease mapped sequence wait time
 
 -- Configure how new splits should be opened
 vim.o.splitright = true
