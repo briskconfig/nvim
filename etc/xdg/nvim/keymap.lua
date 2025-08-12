@@ -3,7 +3,6 @@
 vim.keymap.set("n", "<leader>b", ":execute 'tabfind ' .. '" .. Cfgdir .. "/legacy/brackets.vim'<CR>")  -- Open the nvim brackets config
 vim.keymap.set("n", "<leader>i", ":execute 'tabfind ' .. '" .. Cfgdir .. "'<CR>")                      -- Open the nvim configuration directory in Netrw
 vim.keymap.set("n", "<leader>k", ":execute 'tabfind ' .. '" .. Cfgdir .. "keymap.lua'<CR>")            -- Open the nvim keymap config
-vim.keymap.set("n", "<leader>r", ':lua dofile(Cfgdir .. "keymap.lua")<CR>')                            -- Reload keymaps
 
 -- [ General ]
 vim.keymap.set({ "i", "v" }, "kj", "<Esc>")                          -- Say 'no' to vim-pinkey
@@ -22,10 +21,11 @@ vim.keymap.set("n", "3b", "mhggO#!/usr/bin/env bash<Esc>`h")
 vim.keymap.set("n", "3r", "mhggO#!/usr/bin/env ruby<Esc>`h")
 
 -- [ Harpoon ]
-vim.keymap.set("n", "<leader>a", ":lua require('harpoon.mark').add_file()<CR>")
-vim.keymap.set("n", "<leader>e", ":Telescope harpoon marks<CR>")
-vim.keymap.set({'i', 'n'}, "<leader>n", ":lua require('harpoon.ui').nav_next()<CR>")
-vim.keymap.set({'i', 'n'}, "<leader>p", ":lua require('harpoon.ui').nav_prev()<CR>")
+vim.keymap.set('n', "<leader>a", ":lua require('harpoon.mark').add_file()<CR>")
+vim.keymap.set('n', "<leader>r", ":lua require('harpoon.mark').rm_file()<CR>")
+vim.keymap.set('n', "<leader>e", ":Telescope harpoon marks<CR>")
+vim.keymap.set('n', "<leader>n", ":lua require('harpoon.ui').nav_next()<CR>")
+vim.keymap.set('n', "<leader>p", ":lua require('harpoon.ui').nav_prev()<CR>")
 vim.keymap.set({'i', 'n'}, "<C-h>", ":lua require('harpoon.ui').nav_file(1)<CR>")
 vim.keymap.set({'i', 'n'}, "<C-j>", ":lua require('harpoon.ui').nav_file(2)<CR>")
 vim.keymap.set({'i', 'n'}, "<C-k>", ":lua require('harpoon.ui').nav_file(3)<CR>")

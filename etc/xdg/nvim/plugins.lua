@@ -542,7 +542,6 @@ require("lazy").setup({
 
 	{ -- Autoformat
 		"stevearc/conform.nvim",
-		event = { "BufWritePre" },
 		cmd = { "ConformInfo" },
 		keys = {
 			{
@@ -550,7 +549,7 @@ require("lazy").setup({
 				function()
 					require("conform").format({ async = true, lsp_format = "fallback" })
 				end,
-				mode = "",
+				mode = "n",
 				desc = "[F]ormat buffer",
 			},
 		},
@@ -560,7 +559,7 @@ require("lazy").setup({
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
+				local disable_filetypes = { c = true, cpp = true, dockerfile = true }
 				if disable_filetypes[vim.bo[bufnr].filetype] then
 					return nil
 				else
@@ -571,7 +570,11 @@ require("lazy").setup({
 				end
 			end,
 			formatters_by_ft = {
+        bash = { "shfmt" },
 				lua = { "stylua" },
+        json = { "fixjson" },
+        ruby = { "rubocop" },
+        sh = { "shfmt" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
@@ -639,7 +642,7 @@ require("lazy").setup({
 				-- <c-k>: Toggle signature help
 				--
 				-- See :h blink-cmp-config-keymap for defining your own keymap
-				preset = "default",
+				preset = "super-tab",
 
 				-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 				--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
