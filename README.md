@@ -5,8 +5,11 @@ distribute it with this configuration for ease-of-install_
 ---  
 
 __Dependencies__:  
-  - `curl` __OR__ `wget`  
-  - `git`  
+  - `curl` __OR__ `wget`
+  - `go`  
+  - `git`
+  - `lua` >= 5.1
+
 
 ### Installation:
 
