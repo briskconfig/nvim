@@ -1,9 +1,10 @@
+let g:netrw_alto         = 0
 let g:netrw_banner       = 0
+let g:netrw_browse_split = 4
 let g:netrw_liststyle    = 3
-let g:netrw_browse_split = 2
-let g:netrw_winsize      = 84
-let g:netrw_altv         = 1
+let g:netrw_preview      = 1
 let g:netrw_sort_by      = "exten"
+let g:netrw_winsize      = 90
 
 nnoremap <silent> <Plug>VinegarUp :call <SID>opendir('edit')<CR>
 if empty(maparg('-', 'n')) && !hasmapto('<Plug>VinegarUp')
@@ -30,7 +31,7 @@ function! s:opendir(cmd) abort
 endfunction
 
 function! s:seek(file) abort
-  if get(b:, 'netrw_liststyle') == 2
+  if get(b:, 'netrw_liststyle') == 3
     let pattern = '\%(^\|\s\+\)\zs'.escape(a:file, '.*[]~\').'[/*|@=]\=\%($\|\s\+\)'
   else
     let pattern = '^\%(| \)*'.escape(a:file, '.*[]~\').'[/*|@=]\=\%($\|\t\)'
