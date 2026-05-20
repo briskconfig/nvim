@@ -45,10 +45,10 @@ imap %= %=<Space><ESC>mqa<Space>%<ESC>`qa
 vmap s" <ESC>`>a""<ESC>`<i""
 vmap s' <ESC>`>a''<ESC>`<i''
 vmap s` <ESC>`>a``<ESC>`<i``
-vmap s( <ESC>`>a)<ESC>`<i(
-vmap s{ <ESC>`>a}<ESC>`<i{
-vmap s[ <ESC>`>a]<ESC>`<i[
-vmap s< <ESC>`>a><ESC>`<i<
+vmap s( <ESC>`>a)<ESC>`<i((
+vmap s{ <ESC>`>a}<ESC>`<i{{
+vmap s[ <ESC>`>a]<ESC>`<i[[
+vmap s< <ESC>`>a><ESC>`<i<<
 
 "" Insert at begining of line
 vmap <TAB> mh<C-v>0I<TAB><ESC>`h2l
